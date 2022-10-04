@@ -8,7 +8,9 @@ require (
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v0.32.1
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.10.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.10.0
+	go.opentelemetry.io/otel/metric v0.32.1
 	go.opentelemetry.io/otel/sdk v1.10.0
+	go.opentelemetry.io/otel/sdk/metric v0.32.1
 )
 
 require (
@@ -31,8 +33,6 @@ require (
 	github.com/ugorji/go/codec v1.2.7 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/internal/retry v1.10.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric v0.32.1 // indirect
-	go.opentelemetry.io/otel/metric v0.32.1 // indirect
-	go.opentelemetry.io/otel/sdk/metric v0.32.1 // indirect
 	go.opentelemetry.io/otel/trace v1.10.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.19.0 // indirect
 	golang.org/x/crypto v0.0.0-20220926161630-eccd6366d1be // indirect

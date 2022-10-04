@@ -34,5 +34,11 @@ services:
       - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
-    depends_on:
-      - otel-collector
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      # - ./grafana/dashboards:/etc/grafana/demo-dashboards
+      # - grafana_data:/var/lib/grafana

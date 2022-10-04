@@ -4,6 +4,7 @@ import (
 	"context"
 	"fathil/golang-tracing/delivery"
 	"log"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"go.opentelemetry.io/otel"
@@ -35,7 +36,7 @@ func main() {
 	s.GET("product", delivery.Index)
 	s.GET("product/:id", delivery.Show)
 
-	s.Run(":5003")
+	s.Run(":5000")
 }
 
 func initTracerProvider(endpoint string) error {
@@ -52,7 +53,7 @@ func initTracerProvider(endpoint string) error {
 
 	// Create meter provider
 	meterProvider := metric.NewMeterProvider(
-		metric.WithReader(metric.NewPeriodicReader(meterExp)),
+		metric.WithReader(metric.NewPeriodicReader(meterExp, metric.WithInterval(2*time.Second))),
 	)
 
 	global.SetMeterProvider(meterProvider)
