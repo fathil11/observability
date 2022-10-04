@@ -12,5 +12,5 @@ It's my experiment about how to integrate a service with the Open Telemetry (Ote
 - Prometheus
 - Grafana (*soon)
 
-**Logging Tools (*Soon)**
+**Logging Tools (\*Soon)**
 
